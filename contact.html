@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- {% load static %} -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/conatct.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body id="main_content">
+<nav>
+   <div class="top_bar">
+        <div class="top_bar_content">
+            <div class="section_top skip-link-main">
+                <a href="#heading-1" class="skip-link">Skip to Main Content</a>
+            </div>
+            <span class="section_top material-icons block_icone_div" style="display: none;" onclick="toppopop()">dehaze</span>
+            <div class="section_top top_bar_connect_div" id="top_bar_javascript">
+            <div class="section_top font-buttons">
+                <div class="theme-colors">
+                    <div class="theme-head">Font Size:</div>
+                    <span id="decrease">A-</span>
+                    <span id="reset">A  </span>
+                    <span id="increase">A+</span>
+                </div>
+            </div>
+            <div class="section_top theme-main">
+                <div class="theme-colors">
+                    <div class="theme-head">Select Theme:</div>
+                    <div class="theme blue" id="blue"></div>
+                    <div class="theme green" id="green"></div>
+                    <div class="theme yellow" id="yellow"></div>
+                    <div class="theme dark" id="black"></div>
+                    <div class="theme white" id="white"></div>
+                </div>
+            </div>
+            <div class="section_top search-bar">
+                 <div class="custom-search-wrapper">
+                    <input type="text" class="custom-search-field" placeholder="search here something....">
+                    <button class="custom-search-btn">Search</button>
+                </div>
+            </div>
+            <div class="section_top visitor-count">
+                <button>Visitors:7713950</button>    
+            </div>
+            <div class="section_top admin-login">
+                <a href="#">Admin Login</a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="homenav-main">
+        <div class="homenav-top"></div>
+        <div class="homenav_div_block">
+            <div class="homenav-1">
+            <div class="sub_homediv homenav-1_main-image">
+                <div class="homenav-1-img"><img src="img/homelogo.png" height="140px" width="180px"></div>
+                <div class="homenav-1-psg"><h1><span class="government_name">Government of Uttar Pradesh</span> <br><span class="government_name_hindi">नगर निगम मथुरा वृन्दावन</span></h1></div>
+            </div>
+            <div class="sub_homediv homenav-1-main-image1">
+                <div class="homenav-1-contact"><img src="img/homenumber.jpg" alt="home_image" height="140px" width="160px" ></div>
+            </div>
+            <div class="sub_homediv homenav-1-main-image2">
+                <div class="homenav-1-img-1">
+                    <img src="img/home.png">
+                    <span class="user-activity">
+                        <a href="" class="navigation-error">LOGIN</a>&#124; &#124;&nbsp;&nbsp;
+                        <a href="registraion.html">REGISTER</a>
+                    </span>
+                </div>
+                <div class="homenav-1-img-2">
+                    <img src="img/homeup.png" alt="" height="140px" width="140px">
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<main id="main">
+    <section class="tender_section">
+        <div class="main-home">
+            <div class="home-div-home">
+                <div class="home-div-sub-main">
+                    <a href="mainnagar.html"><span class="material-icons" id="icones">home</span><span class="home-tag">Home</span></a>
+                    <a href="tender.html"><span class="material-icons" id="icones">work</span><span class="home-tag">Tenders</span></a>
+                    <a href="gallery.html"><span class="material-icons" id="icones">collections</span><span class="home-tag">Gallery</span></a>
+                    <a href=""><span class="material-icons" id="icones">place</span><span class="home-tag">Site Map</span></a>
+                    <a href="contact.html"><span class="material-icons" id="icones">call</span><span class="home-tag">Contact Us</span></a>
+                </div>
+                <div class="home-div-sub-main-1">
+                    <a class="blue" href="#"><span class="material-icons" id="home-btn">home</span><span class="home-tag in">Notice U/s 213</span></a>
+                    <a class="yellow" href="#"><span class="material-icons" id="home-btn">home</span><span class="home-tag in">Property Tax</span></a>
+                    <a class="green" href="#"><span class="material-icons" id="home-btn">home</span><span class="home-tag in">Prop.Mutation</span></a>
+                </div>
+            </div>
+            <div class="contact_body_main_details">
+                <div class="contact_container_head">
+                    <h3>&nbsp;&nbsp;&nbsp;Contact Us</h3>
+                </div>
+                <div class="contact_container">
+                    <div class="contact_details_1">
+                        <div class="contact_detail_head">
+                            <h3>Interested in discussing?</h3>
+                        </div>
+                        <form action="/submit" method="post">
+                            <div class="contact_body_title">
+                                <label for="name">Name</label><br>
+                                <input type="text" id="name" name="name" placeholder="Enter Name" required>
+                            </div>
+                            <div class="contact_body_title">
+                                <label for="email">Email</label><br>
+                                <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                            </div>
+                            <div class="contact_body_title usser">
+                                <div class="contact_user">
+                                    <label for="subject">Subject</label><br>
+                                    <input type="text" id="subject" name="subject" placeholder="Enter Subject" required>
+                                </div>
+                                <div class="contact_user">
+                                    <label for="number">Number</label><br>
+                                    <input type="text" id="number" name="number" placeholder="Enter Number" required>
+                                </div>
+                            </div>
+                            <div class="contact_body_title">
+                                <label for="message">Message</label><br>
+                                <textarea id="message" name="message" rows="6" cols="36" placeholder="Enter Message" required></textarea><br>
+                            </div>
+                            <div class="contact_body_title">
+                                <button type="submit" class="btn_sumbit">Send your message</button>
+                                <button type="reset" class="btn_reset">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="contact_details_2">
+                        <div class="contact_body">
+                            <span class="material-icons bro" style="font-size: 35px;" >place</span>
+                            <div class="conatact_location_body">
+                                <h4>Our Location</h4>
+                                <div>Nagar Nigam Mathura Vrindavan, Bhuteshwar jalkal compound , Mathura Uttar Pradesh 281001</div>
+                            </div>
+                        </div>
+                        <div class="contact_body">
+                            <span class="material-icons" style="font-size: 35px;" >phone</span>
+                            <div class="conatact_location_body">
+                                <h4>Contact Number</h4>
+                                <div>Phone: 0565-2503632</div>
+                            </div>
+                        </div>
+                        <div class="contact_body">
+                            <span class="material-icons" style="font-size: 35px;" >mail</span>
+                            <div class="conatact_mail_body">
+                                <h4>Contact Number</h4>
+                                <div>nagarayuktmathura@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="contact_body">
+                            <div class="conatact_mail_body">
+                                <div class="conatact_loaction_map">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7078.154171806427!2d77.68997600000002!3d27.497978!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3973711a2a84c28d%3A0x6008ff9eae19858a!2sNagar%20Nigam%20Mathura%20vrindavan!5e0!3m2!1sen!2sin!4v1752203168839!5m2!1sen!2sin" 
+                                    width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-1">
+            <div class="disclamer-main">
+                <p> <b>Disclaimer :</b> The information provided on this website is indicative only. The Visitors are requested to collect 
+                    authentic information from section concern of the Corporation. The Information provided on this website cannot 
+                    be produced for legal purpose.</p>
+            </div>
+            <div class="last-part-main">
+                <div class="last-sub-part-main">
+                    <div class="get-last">
+                        <div class="get-head"><h2>Get in Touch</h2></div>
+                        <div class="get-phone">
+                            <div class="get-phone-1">
+                                <span><span class="material-icons bro" >place</span> <b>Address :</b>Nagar Nigam Mathura-Vrindavan General Ganj Rd, 
+                                Bangali Ghat, Mathura, Uttar Pradesh 281001</span>
+                            </div>
+                        </div>
+                        <div class="get-phone"><span class="material-icons">phone</span><span>Phone: Phone: 0565-2503632</span></div>
+                        <div class="get-phone"><span class="material-icons">mail</span><span>Email: nagarayuktmathura@gmail.com</span></div>
+                        <div class="get-phone-2"><span class="material-icons">language</span><span>Website: www.nnmvonline.in</span></div>
+                    </div>
+                    <div class="get-last">
+                        <div class="get-head"><h2>About Nagar Nigam</h2></div>
+                        <div class="get-phone"><span class="material-icons">keyboard_double_arrow_right</span><span>Introduction</span></div>
+                        <div class="get-phone"><span class="material-icons">keyboard_double_arrow_right</span><span>Aims & Objectives</span></div>
+                        <div class="get-phone"><span class="material-icons">keyboard_double_arrow_right</span><span> Employees List</span></div>
+                        <div class="get-phone"><span class="material-icons">keyboard_double_arrow_right</span><span> Officers List</span></div>
+                        <div class="get-phone-2"><span class="material-icons">keyboard_double_arrow_right</span><span>  E-Newsletter</span></div>
+                    </div>
+                </div>
+                <div class="last-sub-part-main-1">
+                    <div class="get-last">
+                        <div class="get-head"><h2>Online Services</h2></div>
+                        <div class="get-phone"><span class="material-icons">keyboard_double_arrow_right</span><span> Online Complaints</span></div>
+                        <div class="get-phone"><span class="material-icons">keyboard_double_arrow_right</span><span> Status of Complaints</span></div>
+                        <div class="get-phone"><span class="material-icons">keyboard_double_arrow_right</span><span> Birth Certificate</span></div>
+                        <div class="get-phone"><span class="material-icons">keyboard_double_arrow_right</span><span> Death Certificate</span></div>
+                        <div class="get-phone-2"><span class="material-icons">keyboard_double_arrow_right</span><span> Important Link</span></div>
+                    </div>
+                    <div class="get-last">
+                        <div class="get-head"><h2>Useful Links</h2></div>
+                        <div class="get-phone"><span class="material-icons">keyboard_double_arrow_right</span><span> RTI Act</span></div>
+                        <div class="get-phone"><span class="material-icons">keyboard_double_arrow_right</span><span> Gallery</span></div>
+                        <div class="get-phone"><span class="material-icons">keyboard_double_arrow_right</span><span> Contact Us</span></div>
+                        <div class="get-phone"><span class="material-icons">keyboard_double_arrow_right</span><span> Sitemap</span></div>
+                        <div href="" class="get-phone-social">
+                            <span class="material-icons">keyboard_double_arrow_right</span><span> Disclaimer</span>
+                            <div class="get-phone-social-media">
+                                <div class="soical-facebook"><a href="#" class="fa fa-facebook"></a></div>
+                                <div class="social-twitter"><a href="#" class="fa fa-twitter"></a></div>
+                                <div class="social-instagram"><a href="#" class="fa fa-instagram"></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="copyright-text">
+                    <p>Copyright ©2020 | Nagar Nigam Mathura Vrindavan | Design & Developed By : Synergy Telematics Pvt. Ltd.</p>
+                </div>
+            </footer>
+        </div>
+    </section>
+</main>
+</body>
+<script src="js/nav.js"></script>
+</html>

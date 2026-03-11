@@ -1,0 +1,510 @@
+<html>
+    <head>
+        <!-- {% load static %} -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>The Main Page</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="css/main1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+<body id="main_content" >
+<nav>
+   <div class="top_bar">
+        <div class="top_bar_content">
+            <div class="section_top skip-link-main">
+                <a href="#heading-1" class="skip-link">Skip to Main Content</a>
+            </div>
+            <span class="section_top material-icons block_icone_div" style="display: none ;">dehaze</span>
+            <div class="section_top top_bar_connect_div" id="top_bar_javascript">
+            <div class="section_top font-buttons">
+                <div class="theme-colors">
+                    <div class="theme-head">Font Size:</div>
+                    <span id="decrease">A-</span>
+                    <span id="reset">A  </span>
+                    <span id="increase">A+</span>
+                </div>
+            </div>
+            <div class="section_top theme-main">
+                <div class="theme-colors">
+                    <div class="theme-head">Select Theme:</div>
+                    <div class="theme blue" id="blue"></div>
+                    <div class="theme green" id="green"></div>
+                    <div class="theme yellow" id="yellow"></div>
+                    <div class="theme dark" id="black"></div>
+                    <div class="theme white" id="white"></div>
+                </div>
+            </div>
+            <div class="section_top search-bar">
+                 <div class="custom-search-wrapper">
+                    <input type="text" class="custom-search-field" placeholder="search here something....">
+                    <button class="custom-search-btn">Search</button>
+                </div>
+            </div>
+            <div class="section_top visitor-count">
+                <button>Visitors:7713950</button>    
+            </div>
+            <div class="section_top admin-login">
+                <a href="#">Admin Login</a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="homenav-main">
+        <div class="homenav-top"></div>
+        <div class="homenav_div_block">
+            <div class="homenav-1">
+            <div class="sub_homediv homenav-1_main-image">
+                <div class="homenav-1-img"><img src="img/homelogo.png" height="140px" width="180px"></div>
+                <div class="homenav-1-psg"><h1><span class="government_name">Government of Uttar Pradesh</span> <br><span class="government_name_hindi">नगर निगम मथुरा वृन्दावन</span></h1></div>
+            </div>
+            <div class="sub_homediv homenav-1-main-image1">
+                <div class="homenav-1-contact"><img src="img/homenumber.jpg" alt="home_image" height="140px" width="160px" ></div>
+            </div>
+            <div class="sub_homediv homenav-1-main-image2">
+                <div class="homenav-1-img-1">
+                    <img src="img/home.png">
+                    <span class="user-activity">
+                        <a href="" class="navigation-error">LOGIN</a>&#124; &#124;&nbsp;&nbsp;
+                        <a href="">REGISTER</a>
+                    </span>
+                </div>
+                <div class="homenav-1-img-2">
+                    <img src="img/homeup.png" alt="home_Image" height="140px" width="140px">
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <main id="main">
+        <section>
+            <div class="container">
+                <div class="nagar-main" id="heading-1">
+                    <div class="main-home-pic">
+                        <div class="slideshow-container">
+                            <div class="mySlides fade">
+                                <img src="img/homediv.jpeg" alt="source">
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="img/homediv1.jpeg" alt="source">
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="img/homedivbro.jpeg" alt="source">
+                            </div>
+                            <a class="prev" onclick="plusSlides(-1)">❮</a>
+                            <a class="next" onclick="plusSlides(1)">❯</a>
+                        </div>
+                    </div>
+                    <div class="card-main">
+                        <div class="card-head"><h2>&nbsp;&nbsp;Helpline Numbers</h2></div>
+                        <marquee scrolldelay="80" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+                            <div class="card-sub-main">
+                                <a href="#" class="card-img">टोल फ्री नंबर :1533</a>
+                                <a href="#" class="card-img">सीवर सफाई (सफाई मित्र) : 14420</a>
+                                <a href="#" class="card-img">मथुरा जोन: 0565 2503632</a>
+                                <a href="#" class="card-img">वृन्दावन जोन: 0565 2442331</a>
+                                <a href="#" class="card-img">(2)-दिनेश कुशवाहा (प्रकाश विभाग): 6397140058</a>
+                                <a href="#" class="card-img bo">(3)-रावत जी (वृन्दावन जोन : प्रकाश विभाग) : 8532000659</a>
+                            </div>
+                    </marquee>
+                    </div>
+                    <div class="main-home">
+                        <div class="home-div-home">
+                            <span class="material-icons blocked_home_div">dehaze</span>
+                            <div class="home-div-sub-main">
+                                <a href="mainnagar.html"><span class="material-icons" id="icones">home</span><span class="home-tag">Home</span></a>
+                                <a href="tender.html"><span class="material-icons" id="icones">work</span><span class="home-tag">Tenders</span></a>
+                                <a href="gallery.html"><span class="material-icons" id="icones">collections</span><span class="home-tag">Gallery</span></a>
+                                <a href=""><span class="material-icons" id="icones">place</span><span class="home-tag">Site Map</span></a>
+                                <a href="contact.html"><span class="material-icons" id="icones">call</span><span class="home-tag">Contact Us</span></a>
+                            </div> 
+                            <div class="home-div-sub-main-1">
+                                <a class="blue" href="#"><span class="material-icons" id="home-btn">home</span><span class="home-tag in">Notice U/s 213</span></a>
+                                <a class="yellow" href="#"><span class="material-icons" id="home-btn">home</span><span class="home-tag in">Property Tax</span></a>
+                                <a class="green" href="#"><span class="material-icons" id="home-btn">home</span><span class="home-tag in">Prop.Mutation</span></a>
+                            </div>
+                        </div>
+                        <div class="home-div">
+                            <div class="home-sub">
+                                <div class="about-home">
+                                    <div class="home-head"><h4>	&nbsp;&nbsp;About Nagar Nigam</h4></div>
+                                    <div class="intro-main">
+                                        <div class="intr">
+                                            <span class="material-icons">arrow_right_alt</span><span class="intr-text">Introduction</span>
+                                        </div>
+                                        <div class="intr">
+                                            <span class="material-icons">arrow_right_alt</span><span class="intr-text">History of Nagar Nigam</span>
+                                        </div>
+                                        <div class="intr">
+                                            <span class="material-icons">arrow_right_alt</span><span class="intr-text">Aims & Objective</span> 
+                                        </div>
+                                        <div class="intr">
+                                            <span class="material-icons">arrow_right_alt</span><span class="intr-text">About City</span>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="#">View More » </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about-onilne">
+                                    <div class="home-head"><h4>&nbsp;&nbsp;Online Services</h4></div>
+                                    <div class="intro-main">
+                                        <div class="intr">
+                                            <span class="material-icons">arrow_right_alt</span><span>Complaint</span>
+                                        </div>
+                                        <div class="intr">
+                                            <span class="material-icons">arrow_right_alt</span><span class="intr-text">Birth Certificate</span>
+                                        </div>
+                                        <div class="intr">
+                                            <span class="material-icons">arrow_right_alt</span><spna class="intr-text">Death Certificate</span>
+                                        </div>
+                                        <div class="intr">
+                                            <span class="material-icons">arrow_right_alt</span><span class="intr-text">Onilne e-Tenders</span>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="#">View More »</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about-inform">
+                                    <div class="home-head"><h4>	&nbsp;&nbsp;Information</h4></div>
+                                    <div class="intro-main">
+                                        <div class="intr">
+                                            <span class="material-icons">arrow_right_alt</span><span class="intr-text">Construction Details</span>
+                                        </div>
+                                        <div class="intr">
+                                            <span class="material-icons">arrow_right_alt</span><span class="intr-text">List of Toilets</span>
+                                        </div>
+                                        <div class="intr">
+                                            <span class="material-icons">arrow_right_alt</span><span class="intr-text">List of Dustbins</span>
+                                        </div>
+                                        <div class="intr">
+                                            <span class="material-icons">arrow_right_alt</span><span class="intr-text">Officers List</span>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="#">View More »</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>   
+                            <div class="home-sub-1">
+                                <div class="home-head"><h4>	&nbsp;&nbsp;Finance & Account</h4></div> 
+                                <div class="fine">
+                                    <div class="intro-f bude">
+                                        <span class="material-icons">arrow_right_alt</span><span class="fine-text">Budget</span>
+                                    </div>
+                                    <div class="intro-f bala">
+                                        <span class="material-icons">arrow_right_alt</span><span class="fine-text">Balance Sheet/Audit Report</span>
+                                    </div>
+                                    <div class="intro-f serv">
+                                        <span class="material-icons">arrow_right_alt</span><span class="fine-text">Service Level Benchmark (SLV)</span>
+                                    </div>
+                                    <div class="intro-f ca">
+                                        <span class="material-icons">arrow_right_alt</span><span class="fine-text">CA Appointment Letter</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home-sub">
+                                <div class="about-home">
+                                    <div class="home-head"><h4>	&nbsp;&nbsp;About RTI</h4></div>
+                                    <div class="intro-main">
+                                        <div class="intr">
+                                            <span class="material-icons">arrow_right_alt</span><span class="intr-text">RTI Act</span>
+                                        </div>
+                                        <div class="intr">
+                                            <span class="material-icons">arrow_right_alt</span><span class="intr-text">RTI Form</span>
+                                        </div>
+                                        <div class="intr">
+                                            <span class="material-icons">arrow_right_alt</span><span class="intr-text">ITO Adhiniyam</span> 
+                                        </div>
+                                        <div class="intr">
+                                            <span class="material-icons">arrow_right_alt</span><span class="intr-text">Public Information Officer</span>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="#">View More » </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about-home">
+                                    <div class="home-head"><h4>	&nbsp;&nbsp;Public Corner</h4></div>
+                                    <div class="intro-main">
+                                        <div class="intr">
+                                            <span class="material-icons">arrow_right_alt</span><span class="intr-text">Public Corner</span>
+                                        </div>
+                                        <div class="intr">
+                                            <span class="material-icons">arrow_right_alt</span><span class="intr-text">Post in Public Corner</span>
+                                        </div>
+                                        <div class="intr">
+                                            <span class="material-icons">arrow_right_alt</span><span class="intr-text">Feedback</span> 
+                                        </div>
+                                        <div class="intr">
+                                            <span class="material-icons">arrow_right_alt</span><span class="intr-text">Online Payment</span>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="#">View More » </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about-home">
+                                    <div class="home-head"><h4>	&nbsp;&nbsp;Grievance</h4></div>
+                                    <div class="intro-main">
+                                        <div class="intr">
+                                            <span class="material-icons">arrow_right_alt</span><span class="intr-text">Employee Grievance</span>
+                                        </div>
+                                        <div class="intr">
+                                            <span class="material-icons">arrow_right_alt</span><span class="intr-text">Officer Directory</span>
+                                        </div>
+                                        <div class="intr">
+                                            <span class="material-icons">arrow_right_alt</span><span class="intr-text">Contact Us</span> 
+                                        </div>
+                                        <div class="intr">
+                                            <span class="material-icons">arrow_right_alt</span><span class="intr-text">Online Complaints</span>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="#">View More » </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-amrut">
+                        <div class="conatiner-amrut">
+                            <div class="about-home-amrut">
+                                <div class="home-head-amrut"><h4>&nbsp;&nbsp;AMRUT YOJNA</h4></div>
+                                <div class="intro-main-amrut">
+                                    <div class="intr-amrut">
+                                        <span class="material-icons">settings</span><span class="intr-amrut-text">AMRUT Yojna</span>
+                                    </div>
+                                    <div class="intr-amrut">
+                                        <span class="material-icons">task</span><span class="intr-amrut-text">AMRUT Grievance</span>
+                                    </div>
+                                    <div class="intr-amrut">
+                                        <span class="material-icons">man</span><span class="intr-amrut-text">Children Park</span>
+                                    </div>
+                                    <div class="intr-amrut">
+                                        <span class="material-icons">description</span><span class="intr-amrut-text">AMRUT Gallery</span> 
+                                    </div>
+                                    <div class="intr-amrut">
+                                        <span class="material-icons">phishing</span><span class="intr-amrut-text">AMRUT Reforms</span>
+                                    </div>
+                                    <div class="tag-amrut">
+                                        <a href="#">View More » </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about-home-amrut">
+                                <div class="home-head-amrut"><h4>&nbsp;&nbsp;Swachh Bharat</h4></div>
+                                <div class="intro-main-amrut">
+                                    <div class="intr-amrut">
+                                        <span class="material-icons">phishing</span><span class="intr-amrut-text">Plastic Ban Notification</span>
+                                    </div>
+                                    <div class="intr-amrut">
+                                        <span class="material-icons">phishing</span><span class="intr-amrut-text">Door to Door Ward Wise Driver Details</span>
+                                    </div>
+                                    <div class="intr-amrut">
+                                        <span class="material-icons">phishing</span><span class="intr-amrut-text">List of Dustbins</span> 
+                                    </div>
+                                    <div class="intr-amrut">
+                                        <span class="material-icons">phishing</span><span class="intr-amrut-text">List of Litter Bins</span>
+                                    </div>
+                                    <div class="intr-amrut">
+                                        <span class="material-icons">phishing</span><span class="intr-amrut-text">List of Toilets</span>
+                                    </div>
+                                    <div class="tag-amrut">
+                                        <a href="#">View More » </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-main-div-image"> 
+                        <marquee scrolldelay="80" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+                            <div class="slider-head-main-image">
+                                <img src="img/logo.svg" class="image-b">
+                                <img src="img/logo1.svg">
+                                <img src="img/logo2.svg">
+                                <img src="img/logo4.svg">
+                                <img src="img/minstry.svg">
+                                <img src="img/hariday.svg" id="image-border">
+                            </div>
+                        </marquee>
+                    </div>
+                    <div class="main-Certificate">
+                        <div class="Certificate-head"><h3>&nbsp;Swachh Bharat Mission : Nagar Nigam Mathura Vrindavan</h3></div>
+                        <div class="sub-main-certificate">
+                            <div class="carousel-wrapper" id="imageCarousel">
+                                <div class="carousel-slide">
+                                    <img class="carousel-image" src="img/01.jpg" alt="Image 1">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img class="carousel-image" src="img/04.jpg" alt="Image 2">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img class="carousel-image" src="img/05.jpg" alt="Image 3">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img class="carousel-image" src="img/06.jpg" alt="Image 4">
+                                </div>
+                                <button class="carousel-nav-btn carousel-prev" onclick="changeCarouselSlide(-1)">&#10094;</button>
+                                <button class="carousel-nav-btn carousel-next" onclick="changeCarouselSlide(1)">&#10095;</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-officer">
+                        <div class="officer-head"><h3>&nbsp;Office Orders and Inspections</h3></div>
+                        <div class="sub-officer">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="nagar-main-1">
+                    <div class="sub-nagar-main-1">
+                        <div class="nagar-nigam-dial">
+                            <img src="img/imgflex.jpeg">
+                        </div>
+                        <div class="main-slider-main-public-image">
+                            <div class="slider-main-public-image"> 
+                                <div class="head-public"><h2>&nbsp;Public News</h2></div>
+                                <marquee scrolldelay="150" direction="up" onmouseover="this.stop();" onmouseout="this.start(); ">
+                                    <div class="slider-sub-head-public-image">
+                                        <a href="#"><span class="material-icons"> swipe_right_alt</span>&nbsp;<div>पंजीकरण नवीनीकरण उच्चीकरण&hellip;&hellip; &ndash;  24/Mar/2025</div></a>
+                                        <a href="#"><span class="material-icons"> swipe_right_alt</span>&nbsp;<div>फिकल स्लज एवं सेस्टेज प्रब&hellip;&hellip; &ndash;  09/Jan/2025</div ></a>
+                                        <a href="#"><span class="material-icons"> swipe_right_alt</span>&nbsp;<div>Corrigendum in Tender of D&hellip;&hellip; &ndash;  24/Jun/2024</div></a>
+                                        <a href="#"><span class="material-icons"> swipe_right_alt</span>&nbsp;<div>Tender For NOC&hellip;&hellip; &ndash;  08/div ug/2024</div ></a>
+                                        <a href="#"><span class="material-icons"> swipe_right_alt</span>&nbsp;<div>निविदा सूचना&hellip;&hellip; &ndash;  18/Jun/2024  </div ></a>
+                                        <a href="#"><span class="material-icons"> swipe_right_alt</span>&nbsp;<div>मथुरा-वृंदावन के सिविल कार&hellip;&hellip; &ndash;  11/Jun/2024  </div ></a>
+                                        <a href="#"><span class="material-icons"> swipe_right_alt</span>&nbsp;<div>पार्किंग की संशोधित / प्रस&hellip;&hellip; &ndash;  24/Feb/2024 </div ></a>
+                                        <a href="#"><span class="material-icons"> swipe_right_alt</span>&nbsp;<div>नगर निगम मथुरा-वृन्दावन  क&hellip;&hellip; &ndash;  30/Jan/2024   </div></a>
+                                        <a href="#"><span class="material-icons"> swipe_right_alt</span>&nbsp;<div>तत्काल सफाई हेतु क्यू.आर.&hellip;&hellip; &ndash;  04/Jan/2024 </div ></a>
+                                        <a href="#"><span class="material-icons"> swipe_right_alt</span>&nbsp;<div>C and T Tender&hellip;&hellip; &ndash;  04/Jan/2024  </div ></a>
+                                        <a href="#"><span class="material-icons"> swipe_right_alt</span>&nbsp;<div>अति अल्पकालीन ई-निविदा सूच&hellip;&hellip; &ndash;  08/Nov/2023   </div ></a>
+                                        <a href="#"><span class="material-icons"> swipe_right_alt</span>&nbsp;<div>दिनांक 11.08.2023 से 09.09&hellip;&hellip; &ndash;  22/Jul/2023  </div ></a>
+                                        <a href="#"><span class="material-icons"> swipe_right_alt</span>&nbsp;<div>एल0ई0डी0 स्ट्रिप तिरंगा ला&hellip;&hellip; &ndash;  01/div pr/2023  </div ></a>
+                                        <a href="#"><span class="material-icons"> swipe_right_alt</span>&nbsp;<div>वित्तीय वर्ष 2023-24 हेतु&hellip;&hellip; &ndash;  01/Mar/2023 </div ></a>
+                                    </div>
+                                </marquee>
+                            </div>
+                            <div class="slider-main-public-image-1"> 
+                                <div class="head-public-1"><h2>&nbsp;E-Newsletter</h2></div>
+                                <marquee scrolldelay="150" direction="up" onmouseover="this.stop();" onmouseout="this.start();">
+                                    <div class="slider-sub-head-public-image-1">
+                                        <a href="#"><span class="material-icons"> swipe_right_alt</span>&nbsp;<div> E-News Letter Edition 30 M&hellip;&hellip; &ndash; 02/Jul/2021</div></a>
+                                        <a href="#"><span class="material-icons"> swipe_right_alt</span>&nbsp;<div> E-News Letter November 202&hellip;&hellip; &ndash; 30/Nov/2020</div ></a>
+                                    </div>
+                                </marquee>
+                            </div>
+                        </div>
+                        <div class="nagar-nigam-dial-1">
+                            <img src="img/flex1.jpg">
+                        </div>
+                        <div class="eesl-main">
+                            <div class="heading-eesl">
+                                <img src="img/flex2.jpeg" alt="source">
+                            </div>
+                            <div class="text-eesl">
+                                <h2>Helpline Number: 18001803580</h2>
+                            </div>
+                        </div>
+                        <div class="important-head"><h2>Important Notices</h2></div>
+                            <div class="city-main">
+                                <img src="img/dail211.jpeg">
+                            </div>
+                        <div class="Mayor-msg">
+                            <div class="Mayor-head"><h2>Mayor Message</h2></div>
+                            <div class="sub-mayor-msg">
+                                <div class="sub-mayor-img"><img src="img/mayor.jpeg"></div>
+                                <p><b>Shri Vinod Agarwal</b><br>
+                                Mayor, Mathura-Vrindavan</p>
+                                <span class="sub-mayor-msg-text">
+                                   <h3>Nagar Nigam is improving day-by-day by focusing on all major areas. With the advent of digital age, it is only appropriate that we use Internet to make our lives easy.This site will provide every information related to Mathura-Vrindavan Nagar Nigam..</h3>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="municipal-msg">
+                            <div class="municipal-head"><h2>Commissioner Message</h2></div>
+                            <div class="sub-municipal-msg">
+                                <div class="sub-municipal-img"><img src="img/co1.png">
+                                </div>
+                                <p><b>Shri Jag Pravesh (IAS)</b><br>
+                                Municipal Commissioner</p>
+                                <span class="sub-municipal-img-text">
+                                    <h3>Every Municipal Corporation in India is administratively headed by a Municipal Commissioner, who is the de facto head of the municipal corporation, the form of government which is usually granted to a city of more one million in population. While a mayor is elected to serve as the titular head of a municipal corporation, a municipal commissioner is appointed by the state government from the Indian Administrative Service and mostly from State Civi&hellip;&hellip; <a href="#">Read More</a></h3>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+        <div class="container-1">
+            <div class="disclamer-main">
+                <p>Disclaimer : The information provided on this website is indicative only. The Visitors are requested to collect 
+                    authentic information from section concern of the Corporation. The Information provided on this website cannot 
+                    be produced for legal purpose.
+                </p>
+            </div>
+            <div class="last-part-main">
+                <div class="last-sub-part-main">
+                    <div class="get-last">
+                        <div class="get-head"><h2>Get in Touch</h2></div>
+                        <div class="get-phone">
+                            <div class="get-phone-1">
+                                <span><span class="material-icons bro" >place</span> <b>Address :</b>Nagar Nigam Mathura-Vrindavan General Ganj Rd, 
+                                Bangali Ghat, Mathura, Uttar Pradesh 281001</span>
+                            </div>
+                        </div>
+                        <div class="get-phone"><span class="material-icons">phone</span><span>Phone: Phone: 0565-2503632</span></div>
+                        <div class="get-phone"><span class="material-icons">mail</span><span>Email: nagarayuktmathura@gmail.com</span></div>
+                        <div class="get-phone-2"><span class="material-icons">language</span><span>Website: www.nnmvonline.in</span></div>
+                    </div>
+                    <div class="get-last">
+                        <div class="get-head"><h2>About Nagar Nigam</h2></div>
+                        <div class="get-phone"><span class="material-icons">keyboard_double_arrow_right</span><span>Introduction</span></div>
+                        <div class="get-phone"><span class="material-icons">keyboard_double_arrow_right</span><span>Aims & Objectives</span></div>
+                        <div class="get-phone"><span class="material-icons">keyboard_double_arrow_right</span><span> Employees List</span></div>
+                        <div class="get-phone"><span class="material-icons">keyboard_double_arrow_right</span><span> Officers List</span></div>
+                        <div class="get-phone-2"><span class="material-icons">keyboard_double_arrow_right</span><span>  E-Newsletter</span></div>
+                    </div>
+                </div>
+                <div class="last-sub-part-main-1">
+                    <div class="get-last">
+                        <div class="get-head"><h2>Online Services</h2></div>
+                        <div class="get-phone"><span class="material-icons">keyboard_double_arrow_right</span><span> Online Complaints</span></div>
+                        <div class="get-phone"><span class="material-icons">keyboard_double_arrow_right</span><span> Status of Complaints</span></div>
+                        <div class="get-phone"><span class="material-icons">keyboard_double_arrow_right</span><span> Birth Certificate</span></div>
+                        <div class="get-phone"><span class="material-icons">keyboard_double_arrow_right</span><span> Death Certificate</span></div>
+                        <div class="get-phone-2"><span class="material-icons">keyboard_double_arrow_right</span><span> Important Link</span></div>
+                    </div>
+                    <div class="get-last">
+                        <div class="get-head"><h2>Useful Links</h2></div>
+                        <div class="get-phone"><span class="material-icons">keyboard_double_arrow_right</span><span> RTI Act</span></div>
+                        <div class="get-phone"><span class="material-icons">keyboard_double_arrow_right</span><span> Gallery</span></div>
+                        <div class="get-phone"><span class="material-icons">keyboard_double_arrow_right</span><span> Contact Us</span></div>
+                        <div class="get-phone"><span class="material-icons">keyboard_double_arrow_right</span><span> Sitemap</span></div>
+                        <div href="" class="get-phone-social">
+                            <span class="material-icons">keyboard_double_arrow_right</span><span> Disclaimer</span>
+                            <div class="get-phone-social-media">
+                                <div class="soical-facebook"><a href="#" class="fa fa-facebook"></a></div>
+                                <div class="social-twitter"><a href="#" class="fa fa-twitter"></a></div>
+                                <div class="social-instagram"><a href="#" class="fa fa-instagram"></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="copyright-text">
+                    <p>Copyright ©2020 | Nagar Nigam Mathura Vrindavan | Design & Developed By : Synergy Telematics Pvt. Ltd.</p>
+                </div>
+            </footer>
+        </div>
+        </section>
+    </main>
+</body>
+<script src="js/Crousal.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/swach.js"></script>
+</html>

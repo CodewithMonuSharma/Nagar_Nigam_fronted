@@ -1,0 +1,1541 @@
+/*
+  -----------------------------------------------------------------------------
+  GLOBAL STYLES
+  -----------------------------------------------------------------------------
+*/
+:root {
+    /* Colors */
+    --color-primary-red: #d30505;
+    --color-light-red: #ffb9b9;
+    --color-dark-red: #e66767;
+    --color-light-pink: #f5bbbb;
+    --color-light-orange: #f3b84abf;
+    --color-dark-orange: #f7971e;
+    --color-yellow: #e8f406;
+    --color-light-yellow: #ffd200;
+    --color-blue: #4646ef;
+    --color-light-blue: #a3ddf0;
+    --color-dark-blue: #14628c;
+    --color-skyblue: skyblue;
+    --color-dark-skyblue: #1aa4db;
+    --color-white: white;
+    --color-whitesmoke: whitesmoke;
+    --color-black: black;
+    --color-grey: grey;
+    --color-dark-grey: #676565;
+    --color-medium-grey: #989797;
+    --color-light-grey: #aca4a4;
+    --color-brown: brown;
+    --color-deeppink: deeppink;
+    --color-purple: #c62ec6;
+    --color-light-brown: #e0d5bf;
+    --color-pale-orange: #f3d5ba;
+    --color-light-red-transparent: #e38f8f71;
+    --color-light-orange-red: #e8b8a7;
+
+    /* Fonts */
+    --font-family-poppins: 'Poppins', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Spacing */
+    --spacing-xxs: 3px;
+    --spacing-xs: 5px;
+    --spacing-sm: 8px;
+    --spacing-md: 10px;
+    --spacing-lg: 15px;
+    --spacing-xl: 20px;
+    --spacing-xxl: 30px;
+    --spacing-xxxl: 80px;
+
+    /* Border Radius */
+    --border-radius-sm: 5px;
+    --border-radius-md: 10px;
+    --border-radius-full: 50%;
+
+    /* Borders */
+    --border-thin-grey: 1px solid var(--color-light-grey);
+    --border-medium-grey: 2px solid var(--color-grey);
+    --border-dark-grey: 2px solid var(--color-dark-grey);
+    --border-red: 2px solid var(--color-primary-red);
+    --border-black: 2px solid var(--color-black);
+    --border-dark-skyblue: 2px solid var(--color-dark-skyblue);
+    --border-light-red: 2px solid var(--color-light-red);
+    --border-medium-dark-grey: 1px solid var(--color-medium-grey);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: var(--font-weight-regular);
+    font-family: var(--font-family-poppins);
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: var(--color-whitesmoke);
+}
+
+h1, h2, h3, h4, nav a {
+    font-weight: var(--font-weight-semibold); /* Or var(--font-weight-bold) for stronger emphasis */
+}
+
+h2, h3, h4 {
+    margin: 0; /* Consistent margin reset for headings */
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Inherit color by default for links */
+}
+
+/*
+  -----------------------------------------------------------------------------
+  UTILITY CLASSES
+  -----------------------------------------------------------------------------
+*/
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.border-none {
+    border: none !important;
+}
+
+/* Color Utilities */
+.blue {
+    color: var(--color-white);
+    background-color: var(--color-blue);
+}
+
+.yellow {
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+}
+
+.green {
+    color: var(--color-white);
+    background-color: var(--color-dark-blue);
+}
+
+/*
+  -----------------------------------------------------------------------------
+  LAYOUT & CONTAINERS
+  -----------------------------------------------------------------------------
+*/
+.container {
+    display: flex;
+    padding: 0 var(--spacing-xl);
+    flex-wrap: wrap;
+}
+
+.main-section {
+    background-color: var(--color-white);
+    border: var(--border-medium-dark-grey);
+    border-radius: var(--border-radius-md);
+    width: 100%;
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-header {
+    padding: var(--spacing-xs);
+    border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+}
+
+.section-content {
+    padding: var(--spacing-xl);
+}
+
+/*
+  -----------------------------------------------------------------------------
+  TOP BAR & NAVIGATION
+  -----------------------------------------------------------------------------
+*/
+.top-bar {
+    position: static; /* Consider 'fixed' if it should always be visible */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it's on top */
+}
+
+.sub-top-bar {
+    background-color: var(--color-light-orange);
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: var(--border-medium-grey);
+    border-right: var(--border-medium-grey);
+    border-left: var(--border-medium-grey);
+}
+
+.section-bar-item {
+    padding: var(--spacing-md);
+    border-right: var(--border-medium-grey);
+}
+
+.theme-colors {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.theme-color-box {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--color-whitesmoke);
+}
+
+.skip-link {
+    margin-top: var(--spacing-xs);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-black);
+}
+
+.font-buttons {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.font-buttons button {
+    padding: var(--spacing-sm);
+    border: none;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-size: var(--spacing-lg);
+    cursor: pointer;
+}
+
+.search-bar {
+    margin-left: var(--spacing-md);
+    margin-right: var(--spacing-xl);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px; /* Consider max-width for responsiveness */
+}
+
+.search-bar input {
+    width: 80%;
+    padding: var(--spacing-md);
+    border: 1px solid var(--color-grey);
+    outline: none;
+    border-radius: 2px 0 0 2px;
+}
+
+.search-bar button {
+    padding: var(--spacing-md);
+    width: 20%;
+    border-radius: 0 2px 2px 0;
+    border: 1px solid var(--color-grey);
+    background-color: var(--color-yellow);
+    cursor: pointer;
+}
+
+.select-option-group {
+    display: flex;
+    flex: 1;
+    gap: 40px; /* Consider using a variable for this gap */
+    align-items: center;
+}
+
+.visitor-count,
+.admin-login {
+    flex: 1;
+}
+
+.visitor-count button {
+    margin-top: var(--spacing-xs);
+    border-radius: var(--border-radius-sm);
+    text-align: center;
+    background-color: var(--color-purple);
+}
+
+.admin-login button {
+    padding: var(--spacing-sm);
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-weight: var(--font-weight-semibold);
+    border-radius: var(--border-radius-sm);
+}
+
+/*
+  -----------------------------------------------------------------------------
+  HOME SECTION - TOP BAR
+  -----------------------------------------------------------------------------
+*/
+.home-nav-top-bg {
+    background-image: url(../img/bg6.jpg);
+    background-size: cover;
+    opacity: 0.1;
+    height: 175px;
+    position: static; /* Should this be relative to its parent? */
+    top: 75px;
+    border: var(--border-medium-grey);
+}
+
+.home-nav-content {
+    color: var(--color-black);
+    width: 100%;
+    position: absolute;
+    top: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.home-nav-image-group {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.home-nav-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+}
+
+.home-nav-text-section {
+    border-left: var(--border-medium-grey);
+    padding-left: var(--spacing-md);
+    flex: 1 0 auto;
+    font-size: 20px;
+}
+
+.home-nav-contact-info {
+    display: revert; /* This might need a more specific display value */
+}
+
+.home-nav-contact-details {
+    display: flex;
+    flex: 1;
+}
+
+.home-nav-contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.home-nav-contact-item span {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-nav-contact-item a {
+    padding-right: var(--spacing-md);
+    font-size: var(--spacing-lg);
+}
+
+/*
+  -----------------------------------------------------------------------------
+  HOME SECTION - MAIN CONTENT
+  -----------------------------------------------------------------------------
+*/
+.home-section-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-md);
+    gap: var(--spacing-xs);
+    color: var(--color-primary-red);
+    border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+    background-color: var(--color-light-red);
+    border-bottom: var(--border-red);
+}
+
+.home-section-sub-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: var(--spacing-md);
+}
+
+.home-section-sub-nav a {
+    color: var(--color-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.home-section-sub-nav-buttons {
+    margin: 0 var(--spacing-md);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.home-section-sub-nav-buttons a {
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+.home-section-intro {
+    padding: var(--spacing-md);
+    border-bottom: var(--border-dark-grey);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.home-section-intro-text {
+    margin-top: var(--spacing-xxs);
+}
+
+.home-section-tag {
+    margin: var(--spacing-sm);
+    text-align: center;
+}
+
+.home-section-cards {
+    gap: var(--spacing-xl);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.home-section-card-item {
+    border: var(--border-thin-grey);
+    flex: 1;
+    border-radius: var(--border-radius-sm);
+}
+
+/* SECOND DIV - Home Sub 1 */
+.home-sub-section-1 {
+    margin: var(--spacing-xl) 0;
+    border: var(--border-thin-grey);
+    border-radius: var(--border-radius-sm);
+    border-bottom: 2px solid #7a7979; /* Specific grey, consider variable */
+}
+
+.fine-details {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.intro-fine {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: var(--spacing-md);
+    border: 2px solid #7a7979; /* Specific grey, consider variable */
+    border-bottom: none;
+}
+
+.fine-text {
+    padding-top: var(--spacing-xxs);
+}
+
+.bude, .serv, .ca, .bala {
+    border-left: none;
+}
+
+/*
+  -----------------------------------------------------------------------------
+  AMRUT SECTION
+  -----------------------------------------------------------------------------
+*/
+.main-amrut {
+    width: 100%;
+    margin-bottom: var(--spacing-xl);
+}
+
+.home-head-amrut {
+    background-color: var(--color-light-pink);
+    color: var(--color-white);
+    border: 1px solid var(--color-light-pink);
+    border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+}
+
+.intr-amrut {
+    padding: var(--spacing-md);
+    border-bottom: var(--border-dark-grey);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.intr-amrut-text {
+    margin-top: var(--spacing-xxs);
+}
+
+.tag-amrut {
+    margin: var(--spacing-sm);
+    text-align: center;
+}
+
+.conatiner-amrut {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    gap: var(--spacing-xl);
+}
+
+.about-home-amrut {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-md);
+}
+
+/*
+  -----------------------------------------------------------------------------
+  SLIDERS & CAROUSELS
+  -----------------------------------------------------------------------------
+*/
+.slider-main-div-image {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-md);
+    border: var(--border-black);
+    width: 100%;
+    max-height: 200px;
+    margin-bottom: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+}
+
+.slider-main-div-image marquee {
+    margin: var(--spacing-lg);
+}
+
+.slider-head-main-image {
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: var(--spacing-xs) var(--spacing-xs) var(--spacing-sm) var(--spacing-xs);
+}
+
+.slider-head-main-image img {
+    height: 50px;
+    padding: var(--spacing-xs);
+}
+
+#image-border {
+    border: none;
+}
+
+/* Card Slider */
+.card-main {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-md);
+    border: var(--border-medium-dark-grey);
+    width: 100%;
+    margin-bottom: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-head {
+    flex: 1;
+    border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+    background-color: var(--color-light-brown);
+    color: var(--color-black);
+}
+
+.card-main marquee {
+    margin: var(--spacing-xs);
+}
+
+.card-sub-main {
+    padding: var(--spacing-md);
+    display: flex;
+}
+
+.card-img {
+    cursor: pointer;
+    flex: 1 1 auto;
+    background-color: var(--color-skyblue);
+    border: var(--border-dark-skyblue);
+    padding: var(--spacing-lg);
+    border-right: none;
+    color: var(--color-black);
+}
+
+.bo {
+    border-right: var(--border-medium-grey);
+}
+
+/* Main Home Pic */
+.main-home-pic {
+    border-radius: var(--border-radius-md);
+    background-color: var(--color-whitesmoke);
+    border: var(--border-medium-dark-grey);
+    width: 100%;
+    height: auto;
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Certificate */
+.main-certificate {
+    border-radius: var(--border-radius-md);
+    background-color: var(--color-white);
+    border: var(--border-medium-dark-grey);
+    width: 100%;
+    margin-bottom: var(--spacing-xl);
+}
+
+.certificate-head {
+    border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+    padding: var(--spacing-xs);
+    border: var(--border-red);
+    background-color: var(--color-primary-red);
+}
+
+.certificate-head h3 {
+    color: var(--color-white);
+    font-weight: var(--font-weight-medium);
+}
+
+.certificate-image {
+    padding: var(--spacing-xl);
+}
+
+/* Officer */
+.main-officer {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-md);
+    border-top: none;
+    border: var(--border-medium-dark-grey);
+    width: 100%;
+}
+
+.officer-head {
+    border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+    background-color: var(--color-white);
+    padding: var(--spacing-xs);
+    border-bottom: var(--border-medium-grey);
+}
+
+.officer-head h3 {
+    color: var(--color-black);
+}
+
+.sub-officer {
+    height: 500px; /* Consider responsive height */
+}
+
+/*
+  -----------------------------------------------------------------------------
+  NAGAR SECTION (MAIN FLEX CONTAINER)
+  -----------------------------------------------------------------------------
+*/
+.nagar-main {
+    margin-top: var(--spacing-xxxl);
+    flex-basis: 900px; /* Consider using max-width instead of fixed basis */
+    flex-grow: 2;
+    flex-shrink: 1;
+    width: 100%;
+    margin-right: var(--spacing-xl);
+}
+
+.nagar-main-sidebar {
+    margin-top: var(--spacing-xxxl);
+    margin-right: var(--spacing-xl);
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 400px;
+    border-radius: var(--border-radius-md);
+    border: 1px solid #aba9a9; /* Specific grey, consider variable */
+    padding: var(--spacing-xl);
+    background-color: var(--color-white);
+}
+
+.sub-nagar-main-sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+/* Dial Pad Image */
+.nagar-nigam-dial {
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-xl);
+    height: auto;
+    border: var(--border-medium-grey);
+}
+
+.nagar-nigam-dial img {
+    width: 100%;
+    height: 500px; /* Consider responsive height */
+}
+
+/* Dial Pad Slider */
+.slider-main-public-image {
+    border: var(--border-medium-grey);
+    width: 100%;
+    margin-top: var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+}
+
+.slider-main-public-image marquee {
+    width: 100%;
+    height: 250px; /* Consider responsive height */
+}
+
+.head-public {
+    background-color: var(--color-light-red);
+    border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
+    color: var(--color-white);
+    border-bottom: var(--border-dark-red);
+    border-top: var(--border-light-red);
+    border-left: var(--border-light-red);
+    border-right: var(--border-light-red);
+}
+
+.slider-sub-head-public-image a {
+    padding: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    color: #ca1b1b; /* Specific red, consider variable */
+    gap: var(--spacing-xs);
+    border-bottom: var(--border-light-red);
+}
+
+/* Dial Pad Slider E-Newspaper */
+.slider-main-public-image-1 {
+    width: 100%;
+    border: var(--border-medium-grey);
+    margin-top: var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+}
+
+.slider-main-public-image-1 marquee {
+    height: 250px; /* Consider responsive height */
+}
+
+.head-public-1 {
+    background-color: var(--color-light-red);
+    border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
+    color: var(--color-white);
+    border-bottom: var(--border-dark-red);
+    border-top: var(--border-light-red);
+    border-left: var(--border-light-red);
+    border-right: var(--border-light-red);
+}
+
+.slider-sub-head-public-image-1 a {
+    padding: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    color: #ca1b1b; /* Specific red, consider variable */
+    gap: var(--spacing-xs);
+    border-bottom: var(--border-light-red);
+}
+
+/* Dial Pad Next Image */
+.nagar-nigam-dial-1 {
+    margin-bottom: var(--spacing-xl);
+    margin-top: var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-xl);
+    background-color: var(--color-light-blue);
+    border: var(--border-medium-grey);
+}
+
+.nagar-nigam-dial-1 img {
+    width: 100%;
+    height: 450px; /* Consider responsive height */
+}
+
+/* EESL Dial Pad */
+.eesl-main {
+    height: auto;
+    border: var(--border-medium-grey);
+    border-radius: var(--border-radius-sm);
+    background-color: lightblue; /* Consider variable */
+    padding: var(--spacing-xl);
+}
+
+.heading-eesl img {
+    width: 100%;
+    padding-bottom: var(--spacing-lg);
+    border-bottom: var(--border-medium-grey);
+}
+
+.eesl-main h2 {
+    text-align: center;
+    font-size: 16px;
+    margin-top: var(--spacing-md);
+}
+
+/* Important Dial Pad */
+.important-head {
+    margin-top: var(--spacing-md);
+    padding-left: var(--spacing-xs);
+    border: var(--border-medium-grey);
+    border-radius: var(--border-radius-sm);
+    color: #e04444; /* Specific red, consider variable */
+    background-color: var(--color-pale-orange);
+}
+
+/* City Main */
+.city-main {
+    margin-top: var(--spacing-md);
+    border: var(--border-medium-grey);
+    background-color: lightblue; /* Consider variable */
+    border-radius: var(--border-radius-sm);
+    display: inline-flex;
+    justify-content: center;
+    padding: var(--spacing-xl);
+    height: 500px; /* Consider responsive height */
+}
+
+.city-main img {
+    height: 100%;
+    width: 100%;
+}
+
+/* Mayor Dial Pad */
+.mayor-msg {
+    border: var(--border-medium-grey);
+    border-radius: var(--border-radius-sm);
+    margin-top: var(--spacing-md);
+    height: auto;
+    margin-bottom: var(--spacing-xl);
+}
+
+.sub-mayor-img {
+    border: var(--border-thin-grey);
+    width: 100px;
+    height: 140px;
+    padding: var(--spacing-xs);
+    border-radius: var(--border-radius-full);
+}
+
+.sub-mayor-msg {
+    display: flex;
+    padding: var(--spacing-md);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-mayor-msg p {
+    text-align: center;
+}
+
+.sub-mayor-img img {
+    width: 100%;
+    border-radius: var(--border-radius-full);
+    height: 100%;
+}
+
+.mayor-head {
+    border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
+    border: var(--border-thin-grey);
+    background-color: var(--color-pale-orange);
+    padding-left: var(--spacing-xl);
+}
+
+/* Municipal Dial Pad */
+.municipal-msg {
+    height: auto;
+    border: var(--border-medium-grey);
+    border-radius: var(--border-radius-sm);
+}
+
+.municipal-head {
+    border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
+    border: var(--border-thin-grey);
+    background-color: var(--color-pale-orange);
+    padding-left: var(--spacing-xl);
+}
+
+.sub-municipal-msg {
+    display: flex;
+    padding: var(--spacing-md);
+    flex-direction: column;
+    justify-content: left; /* This seems inconsistent with align-items: center */
+    align-items: center;
+}
+
+.sub-municipal-msg p {
+    text-align: center;
+}
+
+.sub-municipal-msg img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: var(--border-radius-full);
+    height: 100%;
+}
+
+.sub-municipal-img {
+    border: var(--border-thin-grey);
+    width: 100px;
+    margin-top: var(--spacing-md);
+    height: 100px;
+    padding: var(--spacing-xs);
+    border-radius: var(--border-radius-full);
+}
+
+/*
+  -----------------------------------------------------------------------------
+  DISCLAIMER
+  -----------------------------------------------------------------------------
+*/
+.disclaimer-main {
+    margin: var(--spacing-xxl);
+    color: var(--color-primary-red);
+    background: #f1c26c; /* Specific color, consider variable */
+    border: 1px solid var(--color-primary-red);
+    border-radius: var(--border-radius-md);
+}
+
+.disclaimer-main p {
+    padding: var(--spacing-md);
+}
+
+/*
+  -----------------------------------------------------------------------------
+  FOOTER
+  -----------------------------------------------------------------------------
+*/
+.last-part-main {
+    border-top: var(--border-red);
+    background-color: var(--color-white);
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-xxl);
+    flex-wrap: wrap;
+}
+
+.get-last {
+    flex: 1;
+    border-radius: var(--border-radius-md);
+    border: var(--border-thin-grey);
+}
+
+.get-last h2 {
+    font-size: 16px;
+}
+
+.get-last > div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bro {
+    font-size: 18px;
+}
+
+.get-phone-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.get-phone-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    justify-content: center;
+    align-items: center;
+}
+
+.get-phone-social-media {
+    flex: 1;
+}
+
+.get-phone-social {
+    padding: var(--spacing-md);
+}
+
+.get-phone {
+    padding: var(--spacing-md);
+    border-bottom: var(--border-thin-grey);
+}
+
+.get-phone-2 {
+    padding: var(--spacing-md);
+}
+
+.get-head {
+    padding: var(--spacing-xs);
+    border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+    border-bottom: var(--border-red);
+    background-color: var(--color-light-orange-red);
+    padding-left: var(--spacing-md);
+}
+
+.get-phone-social-media div {
+    width: 25px;
+    height: 20px;
+    font-size: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.last-sub-part-main {
+    display: flex;
+    flex: 1;
+    gap: var(--spacing-md);
+}
+
+.last-sub-part-main-1 {
+    display: flex;
+    flex: 1;
+    gap: var(--spacing-md);
+}
+
+.social-facebook {
+    padding: 2px;
+    background-color: #2f2ff0; /* Specific blue, consider variable */
+}
+
+.social-twitter {
+    background-color: #62bddb; /* Specific blue, consider variable */
+    padding: 2px;
+}
+
+.social-instagram {
+    background-color: var(--color-deeppink);
+    padding: 2px;
+}
+
+.social-facebook a,
+.social-twitter a,
+.social-instagram a {
+    color: var(--color-white);
+}
+
+/* Copyright */
+.copyright-text {
+    padding: var(--spacing-sm);
+    text-align: center;
+    background-color: #847f7f; /* Specific grey, consider variable */
+}
+
+/*
+  -----------------------------------------------------------------------------
+  POP-UP
+  -----------------------------------------------------------------------------
+*/
+.navigation-popup {
+    position: absolute;
+    top: 0;
+    right: 30%;
+    opacity: 1;
+    background-color: var(--color-white);
+    transform: none;
+    max-width: 800px;
+    border: var(--border-black);
+    background-image: url(img/bgi.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 1001; /* Ensure it's above other content */
+}
+
+.main-bar-popup {
+    background: linear-gradient(180deg, var(--color-dark-orange), var(--color-light-yellow));
+    display: flex;
+    color: var(--color-white);
+    font-weight: var(--font-weight-medium);
+}
+
+.main-bar-content-popup {
+    margin-left: var(--spacing-xs);
+    flex: 1;
+}
+
+.cross-button-popup span {
+    margin: var(--spacing-lg);
+    display: flex;
+    justify-content: right;
+    cursor: pointer;
+}
+
+.first-popup-item {
+    margin-top: var(--spacing-lg);
+}
+
+.sub-main-bar-popup {
+    border: var(--border-thin-grey);
+    padding: var(--spacing-md);
+    margin-left: var(--spacing-lg);
+    margin-right: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+}
+
+.sub-main-bar-popup span {
+    margin: var(--spacing-xs);
+}
+
+.main-complain-popup {
+    border-top: var(--border-thin-grey);
+    display: flex;
+    justify-content: center;
+    margin: var(--spacing-xl);
+}
+
+.main-complain-popup h2 {
+    margin-top: var(--spacing-xxl);
+    font-size: var(--spacing-xl);
+}
+
+.cross-action-button-group {
+    border-top: var(--border-thin-grey);
+    display: flex;
+    justify-content: right;
+    padding: var(--spacing-md) var(--spacing-xl) var(--spacing-md) var(--spacing-md);
+}
+
+.cross-action-button-group button {
+    outline: none;
+    padding: var(--spacing-xs) var(--spacing-md);
+    background-color: var(--color-brown);
+    border: none;
+    color: var(--color-white);
+    margin: var(--spacing-md);
+    cursor: pointer;
+}
+
+.blank-navigationbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    background-color: #b9b6b6; /* Specific grey, consider variable */
+    height: 100vh;
+    width: 100vw;
+    animation: move 3s ease-in-out forwards;
+    z-index: 999; /* Below the actual popup */
+}
+
+@keyframes move {
+    0% { opacity: 0; }
+    50% { opacity: 0.2; }
+    100% { opacity: 0.5; }
+}
+
+.upper-div {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    transform: translateY(-50%, -100%); /* This transform might be incorrect, check intended effect */
+    animation: moveDown 3s ease-in-out forwards;
+    z-index: 1002; /* Above the popup, if it's an overlay */
+}
+
+@keyframes moveDown {
+    0% { transform: translateY(-50%); }
+    100% { transform: translateY(-50%, 50%); } /* This transform might be incorrect */
+}
+
+/*
+  -----------------------------------------------------------------------------
+  CAROUSELS
+  -----------------------------------------------------------------------------
+*/
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-md);
+}
+
+.carousel-nav-button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: var(--color-white);
+    font-weight: var(--font-weight-bold);
+    font-size: 24px;
+    transition: 0.3s ease;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-nav-button.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.carousel-nav-button.prev {
+    border-radius: 0 3px 3px 0;
+}
+
+.carousel-nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Bottom Carousel */
+.carousel-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.carousel-box {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-nav-btn {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.carousel-nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+/*
+  -----------------------------------------------------------------------------
+  RESPONSIVE DESIGN (MEDIA QUERIES)
+  -----------------------------------------------------------------------------
+*/
+
+/* Mobile Devices (max-width: 426px) */
+@media (max-width: 426px) {
+    .container {
+        max-width: 425px;
+        position: relative;
+        top: 220px; /* Adjust based on actual layout */
+        left: 10px;
+        display: block;
+        padding: var(--spacing-md);
+    }
+
+    .nagar-main {
+        width: 95%;
+        margin-right: 0; /* Remove right margin on small screens */
+    }
+
+    .nagar-main-sidebar {
+        margin-top: var(--spacing-md);
+        padding-left: var(--spacing-xl);
+        margin-right: var(--spacing-xl);
+    }
+
+    .top-bar {
+        max-width: 425px;
+    }
+
+    .sub-top-bar {
+        flex-direction: column;
+    }
+
+    .section-bar-item {
+        border: none;
+        border-bottom: 1px solid var(--color-grey);
+    }
+
+    .search-bar {
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .main-section {
+        display: block;
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .home-section-cards {
+        flex-direction: column;
+    }
+
+    .fine-details {
+        display: block;
+    }
+
+    .intro-fine {
+        border: none;
+        border-bottom: var(--border-medium-grey);
+    }
+
+    .ca {
+        border: none;
+    }
+
+    .conatiner-amrut {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .slider-head-main-image {
+        border: none;
+        gap: 0;
+        padding: 0;
+    }
+
+    .image-b {
+        border-left: var(--border-medium-grey);
+    }
+
+    .slider-head-main-image img {
+        border-top: var(--border-medium-grey);
+        border-bottom: var(--border-medium-grey);
+        padding: 0;
+    }
+
+    #image-border {
+        display: none;
+    }
+
+    .section-content {
+        padding: var(--spacing-md);
+    }
+
+    .home-section-bar {
+        display: block;
+    }
+
+    .home-sub-section-1 {
+        border-radius: var(--border-radius-sm);
+    }
+
+    .home-section-sub-nav {
+        flex-direction: column;
+    }
+
+    .home-section-sub-nav div {
+        justify-content: left;
+    }
+
+    .home-section-sub-nav-buttons {
+        flex-direction: column;
+        margin: 0;
+        margin-top: var(--spacing-xs);
+    }
+
+    .last-part-main {
+        flex-direction: column;
+        display: block;
+    }
+
+    .disclaimer-main {
+        margin: var(--spacing-md);
+    }
+
+    .home-nav-text-section h1 {
+        font-size: var(--spacing-lg);
+    }
+
+    .home-nav-content {
+        top: 200px; /* Adjust based on actual layout */
+    }
+
+    .home-nav-image-group {
+        display: none; /* Hide this group on small screens */
+    }
+
+    .user-activity {
+        display: flex;
+        font-size: var(--spacing-lg);
+    }
+
+    .user-activity a {
+        text-align: center;
+    }
+
+    .home-nav-image-group {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-nav-contact-details img {
+        width: 90px;
+        height: 70px;
+    }
+
+    .eesl-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+    }
+
+    .heading-eesl img {
+        width: 100%;
+    }
+
+    .heading-eesl h2 {
+        font-size: 13px;
+        padding: var(--spacing-xs);
+    }
+
+    .city-main img {
+        height: 99%;
+        width: 100%;
+    }
+
+    .container-1 { /* This class is not defined in the provided CSS */
+        position: relative;
+        top: 222px;
+    }
+
+    .last-sub-part-main,
+    .last-sub-part-main-1 {
+        display: block;
+    }
+
+    .get-last {
+        margin-bottom: var(--spacing-md);
+    }
+}
+
+/* Tablets (min-width: 425px and max-width: 880px) */
+@media (min-width: 425px) and (max-width: 880px) {
+    .main-slider-main-public-image { /* This class is not defined in the provided CSS */
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+}
+
+/* Laptops/Desktops (min-width: 1024px and max-width: 1440px) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    body {
+        font-size: 14px; /* Already default, but good for explicit control */
+    }
+
+    .nagar-main {
+        flex-basis: 200px; /* This might make it too small, consider larger basis or max-width */
+        width: 100%;
+    }
+
+    .nagar-main-sidebar {
+        flex-basis: 200px; /* This might make it too small, consider larger basis or max-width */
+        width: 100%;
+    }
+
+    .nagar-nigam-dial img,
+    .nagar-nigam-dial-1 img,
+    .heading-eesl img,
+    .city-main img {
+        width: 100%;
+    }
+
+    .home-nav-image,
+    .home-nav-contact-info {
+        display: none; /* Hide these on larger screens if not needed */
+    }
+}
+
+/* Medium Tablets/Small Laptops (min-width: 768px and max-width: 940px) */
+@media (min-width: 768px) and (max-width: 940px) {
+    .nagar-nigam-dial img,
+    .nagar-nigam-dial-1 img,
+    .heading-eesl img,
+    .city-main img {
+        width: 100%;
+        height: auto; /* Ensure images scale proportionally */
+    }
+
+    .text-eesl { /* This class is not defined in the provided CSS */
+        border-bottom: var(--border-medium-grey);
+    }
+
+    .text-eesl h2 {
+        font-size: 18px;
+    }
+
+    .eesl-main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .eesl-main div {
+        flex: 1;
+    }
+
+    .last-sub-part-main,
+    .last-sub-part-main-1 {
+        display: block;
+    }
+
+    .main-slider-main-public-image { /* This class is not defined in the provided CSS */
+        flex-direction: row;
+    }
+
+    .get-last {
+        margin-bottom: var(--spacing-md);
+    }
+}
